@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Forex Site</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset and global styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            scroll-behavior: smooth;
+            /* transition: 5s all ease-in; */
+        }
+        /* Header styling */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            /* background-color: #1a1a1a; */
+        }
+
+        .header img {
+            height: 70px;
+            border: 2px solid #00bfff;
+            border-radius: 9px;
+            margin: 14px 0px 0px 0px;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        /* Hover effect */
+        .navbar a:hover {
+            /* background-color: #3a3a3a; */
+            color: #00bfff;
+            border-radius: 5px;
+        }
+        
+        /* Hamburger and responsive navbar */
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            color: black;
+            cursor: pointer;
+        }
+        hr{
+                background-color:black ;
+                color: black;
+                width: 90%;
+                margin : 24px auto;
+            }
+               /* Slideshow container styling */
+       /* Slideshow container styling */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Slide */
+.mySlides {
+    display: none;
+    position: relative;
+}
+
+/* Image styling */
+.mySlides img {
+    width: 100%;
+    vertical-align: middle;
+    height: 70vh;  /* Adjust the height */
+    filter: brightness(0.7); /* Darken the image */
+}
+
+/* Overlay text */
+.text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    text-align: center;
+    color: #fff;
+}
+
+.text h1 {
+    font-size: 5em;
+    margin-bottom: 10px;
+}
+
+.text h3 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+.buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 12px 30px;
+    font-size: 1.4em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.3s;
+}
+
+.btn-blue {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-blue:hover {
+    background-color: #0056b3;
+}
+
+.btn-transparent {
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+
+.btn-transparent:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Navigation buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 28px;
+    transition: 0.3s;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+/* styles.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f8f8;
+}
+
+.container {
+    text-align: center;
+    padding: 2em;
+    max-width: 800px;
+}
+
+.section-title {
+    color: #8c8c8c;
+    font-weight: 500;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.main-title {
+    font-size: 2em;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 1.5em;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+.step {
+    background-color: #ffffff;
+    padding: 1.5em;
+    border-radius: 8px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    background-color: #00bcd4;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1em;
+}
+
+.icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.step h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+.step p {
+    color: #666;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.step p strong {
+    color: #333;
+}
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f8f8;
+    margin: 0;
+}
+
+.location-section {
+    text-align: center;
+    max-width: 800px;
+    padding: 2em;
+}
+.fab{
+    width: 50%;
+}
+.find-title {
+    color: #8c8c8c;
+    font-weight: 500;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1em;
+}
+
+.main-title {
+    font-size: 2em;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+.social-icon {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.social-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.description {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+.description em {
+    font-style: italic;
+    color: #333;
+}
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f8f8;
+    margin: 0;
+}
+
+.fx-section {
+    text-align: center;
+    max-width: 1000px;
+    padding: 2em;
+}
+
+.pick-title {
+    color: #8c8c8c;
+    font-weight: 500;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1em;
+}
+
+.main-title {
+    font-size: 2em;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.subtext {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 2em;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5em;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1em;
+}
+
+.card-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.card-description {
+    font-size: 0.95em;
+    color: #666;
+    line-height: 1.6;
+    text-align: left;
+}
+.container2 {
+    width: 80%;
+    max-width: 1200px;
+    text-align: center;
+    padding: 2rem;
+}
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    color: #007bff;
+}
+.stats div {
+    font-weight: bold;
+}
+.stats span {
+    display: block;
+    font-size: 1rem;
+    color: #333;
+}
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.description {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+.card2 {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: left;
+}
+.card img {
+    width: 70px;
+    /* height: 80px; */
+    margin-right: 2rem;
+    border-radius: 4px;
+}
+.card-content {
+    font-size: 1rem;
+    color: #333;
+}
+.card-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.telegram-btn {
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+.telegram-btn:hover {
+    background-color: #0056b3;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#main-footer {
+    width: 100%;
+    background-color: #1c1c1c;
+    color: #e0e0e0;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.disclaimer-section {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.disclaimer {
+    flex: 1;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #d1d1d1;
+}
+
+.social-media {
+    margin-top: 2rem;
+}
+
+.social-media h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e0e0e0;
+    margin-bottom: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-icon img {
+    width: 40px;
+    height: 40px;
+    filter: invert(100%);
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #b0b0b0;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    width: fit-content;
+}
+.container{
+    width: fit-content;
+    margin: auto;
+}.location-section{
+    width: fit-content;
+    margin: auto;
+}
+.fx-section{
+    width: fit-content;
+    margin: auto;
+}
+.container2{
+    width: fit-content;
+    margin: auto;
+}
+footer{
+    width: fit-content;
+    margin: auto;
+}
+.text h1{
+    font-size: 6.5vh;
+}
+.text h3{
+    font-size : 3vh;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .disclaimer-section {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .disclaimer {
+        margin-bottom: 1rem;
+    }
+}
+
+        @media (max-width: 768px) {
+            /* .header{ */
+                /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
+            /* } */
+            .navbar {
+                display: none;
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                /* background-color: ; */
+                padding: 10px 0;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                /*  */
+            }
+            .navbar a{
+                margin: auto
+            }
+            hr{
+                background-color:white;
+                opacity: 0;
+                color: white;
+            }
+            .navbar.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+           
+        }
+    </style>
+</head>
+<div>
+
+    <header class="header">
+        <img class="logo" src="/logo" alt="Logo"> <!-- Replace with the actual path to the logo -->
+        <nav class="navbar" id="navbar">
+            <a href="#forex-signal">FREE FOREX SIGNAL</a>
+            <a href="#channel">TELEGRAM CHANNELS</a>
+            <a href="#forex-signal">VPS</a>
+            <a href="#channel">CONTACT</a>
+            <a href="/login">LOGIN</a>
+        </nav>
+        <div class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">☰</div>
+    </header>
+    <hr><div class="slideshow-container">
+        <!-- Slide 1 -->
+        <div class="mySlides">
+            <img src="/one" alt="Slide 1">
+            <div class="text">
+                <h1>Special Trade Signal</h1>
+                <h3>Join and earn with us in our FREE Telegram channels</h3>
+                <div class="buttons">
+                    <a href="#channel" class="btn btn-blue" id="our-channel">Our Channel</a>
+                    <a href="https://t.me/SpecialTradeSignal_bot" class="btn btn-transparent" id="telegram">Telegram</a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Slide 2 -->
+        <div class="mySlides">
+            <img src="/two" alt="Slide 2">
+            <div class="text">
+                <h1>Special Trade Signal</h1>
+                <h3>Join and earn with us in our FREE Telegram channels</h3>
+                <div class="buttons">
+                    <a href="#channel" class="btn btn-blue" id="our-channel">Our Channel</a>
+                    <a href="https://t.me/SpecialTradeSignal_bot" class="btn btn-transparent" id="telegram">Telegram</a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Slide 3 -->
+        <div class="mySlides">
+            <img src="/three" alt="Slide 3">
+            <div class="text">
+                <h1>Special Trade Signal</h1>
+                <h3>Join and earn with us in our FREE Telegram channels</h3>
+                <div class="buttons">
+                    <a href="#channel" class="btn btn-blue" id="our-channel">Our Channel</a>
+                    <a href="https://t.me/SpecialTradeSignal_bot" class="btn btn-transparent" id="telegram">Telegram</a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Navigation buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    
+    
+<hr>
+    <section id='forex-signal'class="main-main-main">
+<div class="container">
+    <h2 class="section-title">GET OURS</h2>
+    <h1 class="main-title">FREE FOREX SIGNALS</h1>
+    <div class="steps">
+        <!-- Step 1 -->
+        <div class="step">
+            <div class="icon">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/login-rounded-right.png" alt="Sign up icon"/>
+            </div>
+            <h3>Sign up</h3>
+            <p><strong>First Step</strong> – Sign up with us to receive <strong>FREE</strong> access to our Telegram channels.</p>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="step">
+            <div class="icon">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/telegram-app.png" alt="Telegram icon"/>
+            </div>
+            <h3>Access Telegram</h3>
+            <p><strong>Second Step</strong> – Access our Telegram channels and follow the <strong>Free Forex Signals</strong> without any charges.</p>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="step">
+            <div class="icon">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/money.png" alt="Money icon"/>
+            </div>
+            <h3>Trade and Earn</h3>
+            <p><strong>Third Step</strong> – Relax and enjoy the profit by following our <strong>Free Signals</strong>.</p>
+        </div>
+    </div>
+</div>
+
+<div class="location-section">
+    <h3 class="find-title">FIND</h3>
+    <h1 class="main-title">FREE FX SIGNALS NEAR YOU</h1>
+    <p class="description">
+        We provide <em>profitable solutions</em> to clients around Wales, UK, and the world. 
+        Free FX Signals in Llanelli, Swansea, Carmarthen, Cardiff, Newport, Bristol, Liverpool, 
+        Manchester, London, Newcastle, Portsmouth, Glasgow, Birmingham. We operate in the UK and Europe.
+    </p>
+</div>
+
+<div class="fx-section">
+    <h3 class="pick-title">PICK OUR</h3>
+    <h1 class="main-title">FREE FX SIGNALS CHANNELS</h1>
+    <p class="subtext">Simple register with us to get a link to our Telegram Channels</p>
+    
+    <div class="card-container">
+        <div class="card">
+            <a href="https://t.me/SpecialTradeSignal_bot">
+            <img src="/logo" alt="FX Gold Channel" class="card-icon">
+            <h2 class="card-title">Free FX Signals – Gold</h2>
+            <p class="card-description">
+                This signals opens quick scalping trades on GOLD/XAUUSD. It is very quick execution of opening/closing trades. 
+                Highly recommended to purchase our Trade Copier EA to automatically place the trades. You can still use this 
+                signal free of charge but need to place the trades manually every single time. Or you can also purchase our 
+                software that will automatically place our signals to your MT4 account.
+            </p>
+        </a>
+        </div>
+    
+        <div class="card">
+            <a href="https://t.me/SpecialTradeSignal_bot">
+            <img src="/logo" alt="FX EURUSD Channel" class="card-icon">
+            <h2 class="card-title">Free FX Signals – EURUSD</h2>
+            <p class="card-description">
+                This signals opens quick scalping trades on EURUSD pair. It is very quick execution of opening/closing trades. 
+                Highly recommended to purchase our Trade Copier EA to automatically place the trades. You can still use this 
+                signal free of charge but need to place the trades manually every single time. Or you can also purchase our 
+                software that will automatically place our signals to your MT4 account.
+            </p>
+        </a>
+        </div>
+
+        <div class="card">
+            <a href="https://t.me/GoldytokenSRO">
+            <img src="/logo" alt="FX Crypto Channel" class="card-icon">
+            <h2 class="card-title">Free FX Signals – Crypto</h2>
+            <p class="card-description">
+                This signal channel place market execution trades on cryptocurrency with TP and SL details. You can use this 
+                signal free of charge but need to place the trades manually every single time. Or you can also purchase our 
+                software that will automatically place our signals to your MT4 account.
+            </p>
+        </a>
+        </div>
+
+
+        <div class="card">
+            <a href="https://t.me/GoldytokenSRO">
+            <img src="/logo" alt="FX BiC Channel" class="card-icon">
+            <h2 class="card-title">Free FX Signals – BiC</h2>
+            <p class="card-description">
+                This signals opens pending orders every hour in both directions: Buy Limit and Sell Limit, at a distance of 10 
+                points from the current price. Trades on 3 CAD currency pairs GBPCAD, EURCAD, USDCAD. You can use this signal 
+                free of charge but need to place the trades manually every single time. Or you can also purchase our software 
+                that will automatically place our signals to your MT4 account.
+            </p>
+        </a>
+        </div>
+        
+    </div>
+</div>
+<section id="channel">
+<div class="container2">
+    <div class="stats">
+        <div>4<span>Registered users</span></div>
+        <div>99%<span>Positive feedback</span></div>
+        <div>2<span>FREE Channels</span></div>
+        <div>$0<span>Average cost</span></div>
+    </div>
+
+    <h2 class="section-title">AUTOMATED TRADE COPIERS</h2>
+
+    <p class="description">
+        Here you can find all the Trade Copiers we have available to purchase/follow. We are using a well-known platform that provides easy access for everyone who would like to follow Forex Signals. Very simple to set up with instruction included after purchasing the signal. At this point of time we only have MT4 trade copier available. Please pick the correct product for your Meta Trade platform. Can be used with any broker. All the Signals to MT4 trades copiers are restricted to use only with specified channel, Meta Trade account number and license number. They will expire after set time. We have Licenses valid for 1 month, 3 months, 6 months or 1 year.
+    </p>
+
+    <div class="card2"><a href="https://t.me/GoldytokenSRO">
+        <img src="https://freefxsignals.co.uk/wp-content/uploads/2024/05/puprime-banner-2-300x150.jpeg" alt="PU Prime – Online Brokerage">
+        <div class="card-content">
+            <div class="card-title">PU Prime – Online Brokerage</div>
+            <p>As your preferred CFD broker, PU Prime offers its clients more than just a trading platform. We offer opportunities to trade multiple markets, including FX, Commodities, Shares, ETFs and even Bonds.</p>
+        </div>
+    </div>
+</a>
+
+   <a href="https://t.me/GoldytokenSRO"> <div class="card2">
+        <img src="https://freefxsignals.co.uk/wp-content/uploads/2022/09/forex-trade-copier-logo-post-300x150.png" alt="Professional Forex Signal Service">
+        <div class="card-content">
+            <div class="card-title">PROFESSIONAL FOREX SIGNAL SERVICE</div>
+            <p>Forex Trade Copier is a professional website that provides opportunity for both signal followers and signal providers.</p>
+        </div>
+    </div>
+</a>
+    <a href="https://t.me/SpecialTradeSignal_bot" class="telegram-btn">TELEGRAM CHANNEL</a>
+</div>
+</section>
+<footer id="main-footer">
+    <div class="disclaimer-section">
+        <div class="disclaimer">
+            <p>Many efforts are made to send and provide the best accurate tools. However, Free FX Signals cannot guarantee methods and provided tools. The examples trades shown on this website should not be referred to as a promise. The potential and results are entirely dependent on the user. A lot of factors are included in your success in trading. The tools shouldn’t be referred to as a guaranteed success, not in any point. There is no guarantee that you can replicate the success that shown on this website. When you trade - any amount of capital is at risk. Moreover, Any form of trading compiles to different rules and regulations in different countries. Free FX Signals is not responsible in any way for your communication with other instruments. The responsibility of trading and compliance to local laws and rules applies solely on the user and on the company that provides him for trading. All the information displayed on our website, including the tools, is based solely on AI opinion. We should not be referred as an investing or finance advisors.</p>
+        </div>
+        <div class="disclaimer">
+            <p>Forex trading has large potential rewards, but also large potential risk. You must be aware of the risks and be willing to accept them in order to invest in the stock, binary options or futures markets. Don’t trade with money you can’t afford to lose especially with leveraged instruments such as binary options trading, futures trading or forex trading. This website is neither a solicitation nor an offer to Buy/Sell stocks, futures or options. No representation is being made that any account will or is likely to achieve profits or losses similar to those discussed on this website. The past performance of any trading system or methodology is not necessarily indicative of future results. You could lose all of your money fast due too: poor market trading conditions, mechanical error, emotional induced errors, news surprises and earnings releases.</p>
+        </div>
+        <div class="disclaimer">
+            <p>The owners of the website and the website hereby waive any liability whatsoever due to the use of the website and/or information. Use of the website, the content and the information is made on the users' sole liability. The user hereby releases the owners of the website from any liability for damage caused to his computer, if any, through the use of the website and/or its content and/or its various services. The user hereby releases the owners of the website, the website, their partners, agents, employees, officers, managers, directors, shareholders, etc. from any liability for losses and/or financial damages and/or personal bodily damages and/or fraud, caused through the use of the website.</p>
+        </div>
+    </div>
+
+    <div class="social-media">
+        <h3>OUR SOCIAL MEDIA</h3>
+        <div class="social-icons">
+            <!-- Telegram Icon -->
+            <a href="#" class="social-icon" aria-label="Telegram">
+                <svg width="40" height="40" fill="#e0e0e0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.98 14.993L9.694 19.97c.397 0 .57-.17.78-.375l1.87-1.815 3.884 2.86c.713.395 1.218.19 1.403-.653L21.955 5.3c.245-1.009-.376-1.397-1.07-1.13L2.43 9.56c-.968.396-.957.96-.171 1.2l4.395 1.37 10.179-6.418c.48-.27.913-.12.554.15z"/>
+                </svg>
+            </a>
+    
+            <!-- Facebook Icon -->
+            <a href="#" class="social-icon" aria-label="Facebook">
+                <svg width="40" height="40" fill="#e0e0e0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.656 9.128 8.438 9.878V14.89H7.898v-2.89h2.54V9.888c0-2.52 1.498-3.91 3.792-3.91 1.1 0 2.25.196 2.25.196v2.48h-1.268c-1.246 0-1.63.772-1.63 1.562v1.88h2.773l-.444 2.889h-2.33v7.001C18.343 21.128 22 16.991 22 12z"/>
+                </svg>
+            </a>
+    
+            <!-- Instagram Icon -->
+            <a href="#" class="social-icon" aria-label="Instagram">
+                <svg width="40" height="40" fill="#e0e0e0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm5.05-.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+    
+    
+
+    <div class="footer-bottom">
+        <p>Copyright © 2024 Free Trade Signals</p>
+    </div>
+</footer>
+</div>
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('active');
+        }
+        let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("mySlides");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 5000); // Change slide every 5 seconds
+    }
+
+    function plusSlides(n) {
+        slideIndex += n - 1;
+        showSlides();
+    }
+    </script>
+
+</body>
+</html>
